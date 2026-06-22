@@ -1,0 +1,817 @@
+body {
+    background-color: #f2f2f2;
+    font-family: "Gentium Book Plus", serif;
+    /* font-weight: 400; */
+    font-style: normal;
+}
+body {
+    margin: 0;
+}
+.row div[class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+}
+.m-b-1{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+a:link {
+    text-decoration: none!important;
+  }
+  a:visited {
+    text-decoration: none!important;
+  }
+  a:hover {
+    text-decoration: none!important;
+  }
+  a:active {
+    text-decoration: none!important;
+  }
+.box-card a .dp-main-logo {
+    margin-top: 18px;
+    height: 78px;
+    width: 87%;
+}
+.box-ad {
+    display: block;
+    text-align: center;
+}
+.date-time {
+    margin-top: 12px;
+    margin-left: 13px;
+    font-size: 14px;
+}
+.date-time span {
+    font-size: 1.09em;
+    line-height: 1.5rem;
+    /* color: #fff; */
+}
+.box-ad {
+    display: block;
+    text-align: center;
+}
+.ads-img {
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-bottom: 3px;
+    /* margin-top: 10px; */
+}
+
+.no-paddding {
+    padding: 0;
+}
+.container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0;
+    margin-left: 0;
+}
+#home-main-nav {
+    background-color: #A91717;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    min-height: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+.top_margin_lr {
+    margin: 0px 60px;
+}
+.body_margin_lr {
+    margin: 0px 40px;
+}
+.nav-item > .nav-link {
+    color: #fff;
+    padding: 5px 6px;
+    border-right: 1px solid #fff;
+    font-size: 1.11em;
+}
+
+.nav-link.active {
+    color: #fff!important;
+    background: #8b1717;
+}
+
+.nav-item > .nav-link:hover {
+    color: #fff;
+    background: #8b1717;
+}
+
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+
+.navbar-nav>li {
+    float: left;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+}
+.lr-border {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.default-container {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#main-home-lead .carousel-indicators {
+    bottom: 160px;
+}#main-home-lead .carousel-indicators li {
+    background-color: #ddd;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+.carousel-control-prev{
+    top: -150px;
+}
+.carousel-control-next{
+    top: -150px;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+h4 {
+    font-size: 18px;
+}
+.box-card {
+    display: block;
+    /* margin-bottom: 0.75rem; */
+    background-color: #fff;
+    border-radius: 0;
+}
+.article-box .list-header a h4.list-title {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #A91717;
+    color: #fff;
+}
+.cat-header a h4.cat-title {
+    margin: 0;
+    background-color: #BB1919;
+    color: #fff;
+    padding: 0.5em;
+}
+.cat-header h4.cat-title {
+    margin: 0;
+    background-color: #BB1919;
+    color: #fff;
+    padding: 0.5em;
+}
+.article-box .title-body a h4.article-title-lead {
+    color: #333;
+    font-size: 1.5em;
+    line-height: 1.6em;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 4px;
+    /* overflow: hidden; */
+    height: auto;
+    /* text-overflow: ellipsis; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    width: 100%;
+}
+.article-box .media-left {
+    padding-right: 5px;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.article-box .media-right {
+    padding-left: 5px;
+}
+
+.article-box .media-right a h4.article-title {
+    font-size: 1.11em;
+    line-height: 1.3em;
+    margin: 0;
+    color: #333;
+    height: 54px;
+    overflow: hidden;
+    padding: 4px;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.embed-responsive-4by3 {
+    padding-bottom: 75%;
+}
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.lead-height {
+    overflow: hidden;
+    display: block;
+    height: 459px;
+}
+
+
+
+.my-custom-scrollbar {
+    position: relative;
+    /* height: 83px; */
+    overflow-y: auto; /* শুধুমাত্র উল্লম্ব স্ক্রলিং চালু থাকবে */
+    /* overflow-x: hidden; অনুভূমিক স্ক্রলবার বন্ধ থাকবে */
+}
+
+/* স্ক্রলবার স্টাইলিং */
+.my-custom-scrollbar::-webkit-scrollbar {
+    width: 10px; /* ডান পাশের স্ক্রলবারের প্রস্থ */
+}
+
+.my-custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.my-custom-scrollbar::-webkit-scrollbar {
+    width: 6px; /* স্ক্রলবার আরও চিকন করা হলো */
+}
+
+.my-custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px; /* গোলাকার প্রান্ত যোগ করা হলো */
+}
+
+.my-custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.news-item {
+    display: flex; /* ফ্লেক্স লেআউট */
+    align-items: center; /* আইকন ও টেক্সট এক লাইনে রাখবে */
+    width: 100%; /* পুরো জায়গা নেবে */
+    padding: 8px 10px; /* কিছু প্যাডিং রাখবে */
+    font-size: 16px; /* ফন্ট সাইজ ঠিক রাখবে */
+    text-decoration: none; /* লিংকের নিচে দাগ উঠতে দেবে না */
+}
+
+.news-icon {
+    color: black; /* আইকনের কালার */
+    margin-right: 5px; /* আইকন ও টেক্সটের মাঝে ফাঁকা */
+    font-weight: bold;
+    flex-shrink: 0; /* আইকন যেন ছোট না হয় */
+    font-size: 11px;
+}
+
+.news-text {
+    white-space: nowrap; /* এক লাইনে সীমাবদ্ধ রাখবে */
+    overflow: hidden; /* অতিরিক্ত অংশ লুকাবে */
+    text-overflow: ellipsis; /* অতিরিক্ত অংশ "..." দেখাবে */
+    display: block; /* ব্লক এলিমেন্ট বানাবে */
+    flex-grow: 1; /* পুরো জায়গা নেবে */
+}
+
+
+
+
+
+
+
+
+
+
+.video-box .video-caption {
+    margin: 0;
+    /* background-color: #BB1919; */
+    font-size: 1.09em;
+    /* line-height: 1.6rem; */
+    color: #fff;
+    padding: 0.55rem 0.5rem;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+}
+.article-box.cat-box {
+    position: relative;
+}
+.article-box .title-body-cat {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+}
+.article-box .title-body-cat a h4.article-cat-title {
+    margin: 0;
+    background-color: rgba(0,0,0,0.4);
+    padding: 0.3em 0.5em;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    font-size: 0.99em;
+    line-height: 1.4em;
+    height: 53px;
+}
+.no-margin {
+    margin: 0;
+}
+.list-group {
+    padding-left: 0;
+}
+.box-card .list-group .list-group-item {
+    font-size: 0.99em;
+    line-height: 1.65em;
+    height: 65px;
+    color: #000;
+    padding: 0.5em;
+    overflow: hidden;
+}
+
+.box-card .list-group-item:first-child, .box-card .list-group-item:last-child {
+    border-radius: 0;
+}
+.sports-row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.sports-height {
+    overflow: hidden;
+    display: block;
+    height: 495px;
+}
+.article-box .title-body a h4.article-title {
+    color: #333;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 4px;
+    margin-top: 0;
+    height: 51px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.article-box .media-right a h4.sp-article-title {
+    font-size: 17px;
+    line-height: 1.3em;
+    margin: 0;
+    color: #333;
+    height: 51px;
+    overflow: hidden;
+    padding: 4px;
+    font-weight: bold;
+}
+.m-t-1 {
+    margin-top: 0.45rem;
+}
+.footer-add {
+    border-top: 3px solid #0070BB;
+}
+.m-l-1 {
+    margin-left: 0.75rem;
+}
+address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+}
+.footer-m {
+    margin: 0px;
+    padding: 1px;
+    font-size: 15px;
+}
+.footerlogo{
+    width: 340px;
+    height: 95px;
+}
+.article-box .list-article.list-scroll {
+    overflow-y: scroll;
+    height: 1500px;
+}
+.article-box .list-body .list-article {
+    margin: 0;
+    display: block;
+    /* border: 1px solid #ebebeb; */
+    /* list-style-type: square; */
+    list-style-type: none;
+    padding: 0;
+}
+.article-box .list-body .list-article li a {
+    color: #000;
+    padding: 0.5em;
+    font-size: 1.15em;
+    line-height: 1.5em;
+    border-bottom: 1px solid #ebebeb;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* height: 59px; */
+}
+.article-box .list-body .list-article li a::before {
+    content: '\f138';
+    font: normal normal normal 14px/1 FontAwesome;
+    padding-right: 8px;
+}
+.single-article .title-body .single-article-title {
+    color: #333;
+    font-size: 2em;
+    line-height: 1.3em;
+    font-weight: bold;
+}
+.single-article .title-body .additional-info span.article-time {
+    color: #555;
+}
+.single-article .title-body .share-tools {
+    margin: 1rem 0;
+    display: block;
+    overflow: hidden;
+}
+.single-article .share-tools .share-nav {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.single-article .share-tools .share-nav li {
+    display: inline-block;
+    float: left;
+    margin-right: 1rem;
+}
+.list-archive .archive-item a span::before, .single-article .title-body .additional-info span.article-time::before {
+    content: '\f017';
+    font: normal normal normal 14px/1 FontAwesome;
+    padding-right: 8px;
+    color: #555;
+}
+.list-archive {
+    margin: 0;
+    display: block;
+    list-style-type: none;
+    padding: 0;
+}
+.list-archive .archive-item {
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 0.5rem;
+}
+.list-archive .archive-item a h4.title-archive {
+    margin: 0.5rem 0;
+    font-size: 1.5em;
+    line-height: 1.5rem;
+    color: #000;
+}
+.list-archive .archive-item a span {
+    color: #555;
+    padding: 2px;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .navbar-toggler {
+        position: relative;
+        float: right;
+        margin-top: 8px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 169px!important;
+    }
+    .footerlogo{
+        width: 268px;
+        height: 85px;
+        margin-bottom: 16px;
+    }
+    .date-time {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .nav-item > .nav-link {
+        border-right: none;
+    }
+    .navbar-nav {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    #main-home-lead .carousel-indicators {
+        bottom: 267px;
+    }
+    .lead-height {
+        height: 393px;
+    }
+    .carousel-control-prev {
+        top: -270px;
+    }
+    .carousel-control-next {
+        top: -270px;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 149px;
+    }
+    .list-group-item-action {
+        width: 81%;
+    }
+    .lead-img-slide{
+        height: 200px!important;
+    }
+    .cat12Img{
+        height: 210px!important;
+    }
+    .sports-height {
+        overflow: hidden;
+        display: block;
+        height: 400px;
+    }
+    .date-time {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    #main-home-lead .carousel-indicators {
+        bottom: 245px;
+    }
+    .lead-height {
+        height: 462px;
+    }
+    .carousel-control-prev {
+        top: -185px;
+    }
+    .carousel-control-next {
+        top: -185px;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 176px;
+    }
+    .list-group-item-action {
+        width: 96%;
+    }
+    .lead-img-slide{
+        height: 225px!important;
+    }
+    .cat12Img{
+        height: 230px!important;
+    }
+    .sports-height {
+        height: 400px;
+    }
+    .date-time {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    #main-home-lead .carousel-indicators {
+        bottom: 220px;
+    }
+    .lead-height {
+        height: 462px;
+    }
+    .carousel-control-prev {
+        top: -220px;
+    }
+    .carousel-control-next {
+        top: -220px;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 201px;
+    }
+    .list-group-item-action {
+        width: 110%;
+    }
+    .lead-img-slide{
+        height: 260px!important;
+    }
+    .cat12Img{
+        height: 260px!important;
+    }
+    .sports-height {
+        height: 433px;
+    }
+    .date-time {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #main-home-lead .carousel-indicators {
+        bottom: 220px;
+    }
+    .lead-height {
+        height: 462px;
+    }
+    .carousel-control-prev {
+        top: -220px;
+    }
+    .carousel-control-next {
+        top: -220px;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 113px;
+        padding: 9px;
+    }
+    .my-custom-scrollbar {
+        /* height: 749px; */
+    }
+    .list-group-item-action {
+        width: 62%;
+    }
+
+    .lead-img-slide{
+        height: 260px!important;
+    }
+    .cat12Img{
+        height: 260px!important;
+    }
+    .sports-height {
+        height: 433px;
+    }
+    .date-time {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .nav-item > .nav-link {
+        border-right: none;
+    }
+    .top_margin_lr {
+        margin: 0px 10px;
+    }
+    .body_margin_lr {
+        margin: 0px 10px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    #main-home-lead .carousel-indicators {
+        bottom: 200px;
+    }
+    .lead-height {
+        height: 460px;
+    }
+    .carousel-control-prev {
+        top: -200px;
+    }
+    .carousel-control-next {
+        top: -200px;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 152.8px;
+    }
+    .video-box .embed-responsive-4by3 {
+        padding-bottom: 61%!important;
+    }
+    .list-group-item-action {
+        width: 84%;
+    }
+
+    .lead-img-slide{
+        height: 285px!important;
+    }
+    .cat12Img{
+        height: 260px!important;
+    }
+    .sports-height {
+        height: 494px;
+    }
+    .date-time {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 1440px) {
+
+    #main-home-lead .carousel-indicators {
+        bottom: 177px;
+    }
+    .lead-height {
+        height: 520px;
+    }
+    .carousel-control-prev {
+        top: -175px;
+    }
+    .carousel-control-next {
+        top: -175px;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 213px;
+    }
+    .video-box .embed-responsive-4by3 {
+        padding-bottom: 380px!important;
+    }
+    .list-group-item-action {
+        width: 117%;
+    }
+
+    .lead-img-slide{
+        height: 370px!important;
+    }
+    .cat12Img{
+        height: 362px!important;
+    }
+    .sports-height {
+        height: 494px;
+    }
+    .date-time {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .epaper{
+        height: 520px!important;
+    }
+    .epaperImg{
+        height: 461px!important;
+    }
+    .epImg{
+        width: 645px!important;
+    }
+}
+@media only screen and (max-width: 2560px) {
+    #main-home-lead .carousel-indicators {
+        bottom: 177px;
+    }
+    .lead-height {
+        height: 578px;
+    }
+    .carousel-control-prev {
+        top: -175px;
+    }
+    .carousel-control-next {
+        top: -175px;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 213px;
+    }
+    .video-box .embed-responsive-4by2 {
+        padding-bottom: 135px!important;
+    }
+    .video-box .embed-responsive-4by3 {
+        padding-bottom: 370px!important;
+    }
+    .list-group-item-action {
+        width: 117%;
+    }
+
+    .lead-img-slide{
+        height: 350px!important;
+    }
+    .cat12Img{
+        height: 362px!important;
+    }
+    .sports-height {
+        height: 530px;
+    }
+    .date-time {
+        margin-top: 12px;
+        margin-left: 0px;
+        font-size: 14px;
+    }
+    .epaper{
+        height: 135px!important;
+    }
+    .epaperImg{
+        height: 50px!important;
+    }
+    .epImg{
+        width: 645px!important;
+    }
+}
+

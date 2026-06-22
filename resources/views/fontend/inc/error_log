@@ -1,0 +1,14 @@
+[18-Oct-2023 12:21:33 UTC] PHP Warning:  include(admin/inc/dbsforfoo.php): Failed to open stream: No such file or directory in /home/bestgyib/samobangla.com/inc/headder.php on line 268
+[18-Oct-2023 12:21:33 UTC] PHP Warning:  include(): Failed opening 'admin/inc/dbsforfoo.php' for inclusion (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bestgyib/samobangla.com/inc/headder.php on line 268
+[18-Oct-2023 12:21:33 UTC] PHP Warning:  Undefined variable $mysqli in /home/bestgyib/samobangla.com/inc/headder.php on line 271
+[18-Oct-2023 12:21:33 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/bestgyib/samobangla.com/inc/headder.php:271
+Stack trace:
+#0 /home/bestgyib/samobangla.com/inc/headder.php(271): mysqli_query()
+#1 {main}
+  thrown in /home/bestgyib/samobangla.com/inc/headder.php on line 271
+[20-Dec-2023 16:53:57 UTC] PHP Warning:  Undefined variable $mysqli in /home/bestgyib/samobangla.com/inc/footer.php on line 13
+[20-Dec-2023 16:53:57 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/bestgyib/samobangla.com/inc/footer.php:13
+Stack trace:
+#0 /home/bestgyib/samobangla.com/inc/footer.php(13): mysqli_query()
+#1 {main}
+  thrown in /home/bestgyib/samobangla.com/inc/footer.php on line 13
