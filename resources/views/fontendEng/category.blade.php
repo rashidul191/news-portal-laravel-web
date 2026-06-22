@@ -26,15 +26,16 @@
                                 <div class="box-card">
                                     <div class="article-box">
                                         <div class="media-left">
-                                            <a href="{{ route('english_news_details' , $n->id) }}">
-                                                <img src="{{ asset('/upload/' . $n->postImage) }}"
+                                            <a href="{{ route('english_news_details', $n->id) }}">
+                                                <img src="{{ asset('public/upload/' . $n->postImage) }}"
                                                     alt="{{ $n->postTitle_eng }}" style="width: 100%; height: 120px;">
                                             </a>
                                         </div>
                                         <div class="media-right">
-                                            <a href="{{ route('english_news_details' , $n->id) }}">
+                                            <a href="{{ route('english_news_details', $n->id) }}">
                                                 <h4 class="article-title">
-                                                    {{ $n->postTitle }}</h4>
+                                                    {{ $n->postTitle }}
+                                                </h4>
                                             </a>
                                         </div>
                                     </div>
@@ -63,14 +64,14 @@
                         <div class="article-box">
                             <div class="list-header">
                                 <a href="{{ route('english_archive') }}">
-                                    <h4 class="list-title">  Latest News  </h4>
+                                    <h4 class="list-title"> Latest News </h4>
                                 </a>
                             </div>
                             <div class="list-body">
                                 <ul class="list-article list-scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
                                     @foreach ($data as $item)
                                         <li class="list-item-article">
-                                            <a href="{{ route('english_news_details' , $item->id) }}">{{ $item->postTitle }}</a>
+                                            <a href="{{ route('english_news_details', $item->id) }}">{{ $item->postTitle }}</a>
                                         </li>
                                     @endforeach
                                 </ul>

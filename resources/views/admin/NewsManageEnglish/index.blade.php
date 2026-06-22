@@ -48,7 +48,7 @@
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td class="text-center">
-                                                        <img src="{{ asset('/upload/' . $item->postImage) }}" width="70"
+                                                        <img src="{{ asset('public/upload/' . $item->postImage) }}" width="70"
                                                             height="70" alt="">
                                                     </td>
                                                     <td>{{ $item->postTitle }}</td>

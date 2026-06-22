@@ -34,15 +34,15 @@
 
     <title>{{ $basicInfo->name }}</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('/upload/' . $basicInfo->fav_icon) }}">
+    <link rel="icon" type="image/png" href="{{ asset('public/upload/' . $basicInfo->fav_icon) }}">
 
 
     <!-- vendor css -->
-    <link href="{{ asset('') }}asset/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="{{ asset('') }}asset/lib/Ionicons/css/ionicons.css" rel="stylesheet">
-    <link href="{{ asset('') }}asset/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
-    <link href="{{ asset('') }}asset/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
-    <link href="{{ asset('') }}asset/lib/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="{{ asset('public') }}/asset/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="{{ asset('public') }}/asset/lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="{{ asset('public') }}/asset/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <link href="{{ asset('public') }}/asset/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
+    <link href="{{ asset('public') }}/asset/lib/bootstrap/bootstrap.css" rel="stylesheet">
 
     <script
         src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-webcomponent@2/dist/tinymce-webcomponent.min.js"></script>
@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
 
-    <link rel="stylesheet" href="{{ asset('') }}asset/css/starlight.css">
+    <link rel="stylesheet" href="{{ asset('public') }}/asset/css/starlight.css">
 
     <!-- Toastr -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">

@@ -73,8 +73,8 @@
                                                 {{ \Carbon\Carbon::parse($item->created_at)->timezone('Asia/Dhaka')->format('d-m-Y') }}
                                             </td>
                                             <td>
-                                                <img src="{{ asset('/upload/' . $item->image_name) }}" width="150" height="200"
-                                                    alt="">
+                                                <img src="{{ asset('public/upload/' . $item->image_name) }}" width="150"
+                                                    height="200" alt="">
                                             </td>
                                             <td>{{ $item->pageno }}</td>
                                             <td style="width:150px;">

@@ -279,8 +279,8 @@
                     $basicInfo = DB::table('basic_infos')->first();
                 @endphp
                 <img class="mx-auto d-block img-responsive pt-2 pb-2 bannerimg"
-                    src="{{ asset('/upload/' . $basicInfo->logo) }}" alt="homepage" class="dark-logo" width="500px"
-                    height="80px" />
+                    src="{{ asset('public/upload/' . $basicInfo->logo) }}" alt="homepage" class="dark-logo"
+                    width="500px" height="80px" />
             </a>
         </div>
         <div class="bg-white news"
@@ -315,15 +315,16 @@
 
                         <h5 id="searchDate" class="left_img active">
                             <a class="hover" href="{{ url('e-paper/' . $item->id) }}">
-                                <img class="side_img" class="rounded" src="{{ asset('/upload/' . $item->image_name) }}"
-                                    alt="{{$item->pageno}}" style="width: 100%; height: 300px;">
+                                <img class="side_img" class="rounded"
+                                    src="{{ asset('public/upload/' . $item->image_name) }}"
+                                     alt="{{$item->pageno}}" style="width: 100%; height: 300px;">
                             </a>
                         </h5>
                     @endforeach
                     <br>
                 </div>
                 <div class="col-sm-10 col-lg-10 right_side" id="mpopupLink">
-                    <img class="right_img" src="{{ asset('/upload/' . $paper->image_name) }}" name="mapimage"
+                    <img class="right_img" src="{{ asset('public/upload/' . $paper->image_name) }}" name="mapimage"
                         style="width: 100%; height: 1220px;">
                 </div>
             </div><br><br>
@@ -340,7 +341,7 @@
                 <span class="close">×</span>
             </div>
             <div class="modal-body">
-                <img class="modal_img" src="{{ asset('/upload/' . $paper->image_name) }}" name="mapimage"
+                <img class="modal_img" src="{{ asset('public/upload/' . $paper->image_name) }}" name="mapimage"
                     style="width: 100%; height: 1800px;">
             </div>
         </div>

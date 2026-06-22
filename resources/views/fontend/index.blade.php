@@ -10,7 +10,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
                         <div class="box-ad m-top-1 mt-2">
                             <a href="{{ $a->adds_link }}" target="_blank">
-                                <img class="img-responsive ads-img" src="{{ asset('/upload/' . $a->addsImg) }}">
+                                <img class="img-responsive ads-img" src="{{ asset('public/upload/' . $a->addsImg) }}">
                             </a>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                                 @if ($data['newsLead'])
                                                     <a href="{{ url('news_details/' . $data['newsLead']->id) }}">
                                                         <img class="img-responsive lead-img-slide"
-                                                            src="{{ asset('/upload/' . $data['newsLead']->postImage) }}"
+                                                            src="{{ asset('public/upload/' . $data['newsLead']->postImage) }}"
                                                             alt="{{ $data['newsLead']->postTitle }}"
                                                             style="width: 100%; height: 320px;">
                                                     </a>
@@ -79,7 +79,7 @@
                                                     <div class="box-media">
                                                         <a href="{{ url('news_details/' . $slide->id) }}">
                                                             <img class="img-responsive lead-img-slide"
-                                                                src="{{ asset('/upload/' . $slide->postImage) }}"
+                                                                src="{{ asset('public/upload/' . $slide->postImage) }}"
                                                                 alt="{{ $slide->postTitle }}"
                                                                 style="width: 100%; height: 320px;">
                                                         </a>
@@ -213,13 +213,12 @@
                         <div class="box-ad">
                             <a href="{{ $ad->adds_link }}" target="_blank">
                                 <img class="img-responsive ads-img-responsive ads-img"
-                                    src="{{ asset('/upload/' . $ad->addsImg) }}">
+                                    src="{{ asset('public/upload/' . $ad->addsImg) }}">
                             </a>
                         </div>
                     </div>
                 @endforeach
             </div>
-
             <!-- ========================./Home-Lead-Section============================ -->
 
             <div class="row m-b-1">
@@ -229,7 +228,7 @@
                             <div class="article-box">
                                 <div class="media-left">
                                     <a href="{{ url('news_details/' . $featherPost1->id) }}">
-                                        <img src="{{ asset('/upload/' . $featherPost1->postImage) }}"
+                                        <img src="{{ asset('public/upload/' . $featherPost1->postImage) }}"
                                             alt="{{ $featherPost1->postTitle }}" style="width: 100px; height: 82px;">
                                     </a>
                                 </div>
@@ -273,10 +272,10 @@
                                         @foreach ($news[$key] as $item)
                                             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                                 <div style="background: #fff">
-                                                    <div class="article-box" >
+                                                    <div class="article-box">
                                                         <div class="media-left">
                                                             <a href="{{ url('news_details/' . $item->id) }}">
-                                                                <img src="{{ asset('/upload/' . $item->postImage) }}"
+                                                                <img src="{{ asset('public/upload/' . $item->postImage) }}"
                                                                     alt="{{ $item->postTitle }}" style="width: 100px; height: 82px;">
                                                             </a>
                                                         </div>
@@ -294,7 +293,7 @@
                                                     <div class="box-media m-t-1">
                                                         <a href="{{ url('news_details/' . $item->id) }}">
                                                             <img class="img-responsive cat-media-img-min"
-                                                                src="{{ asset('/upload/' . $item->postImage) }}"
+                                                                src="{{ asset('public/upload/' . $item->postImage) }}"
                                                                 alt="{{ $item->postTitle }}" style="height: 180px; width:100%;">
                                                         </a>
                                                     </div>
@@ -337,7 +336,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat11']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat11']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat11']->postImage) }}"
                                         alt="{{ $news['cat11']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -374,7 +373,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat12']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat12']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat12']->postImage) }}"
                                         alt="{{ $news['cat15']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -410,7 +409,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat8']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat8']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat8']->postImage) }}"
                                         alt="{{ $news['cat8']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -447,7 +446,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat13']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat13']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat13']->postImage) }}"
                                         alt="{{ $news['cat17']->postTitle }}" style="width: 100%; height: 148px;">
                                 </a>
                             </div>
@@ -501,7 +500,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat14']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat14']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat14']->postImage) }}"
                                         alt="{{ $news['cat14']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -538,7 +537,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat15']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat15']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat15']->postImage) }}"
                                         alt="{{ $news['cat15']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -574,7 +573,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat16']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat16']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat16']->postImage) }}"
                                         alt="{{ $news['cat16']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -612,7 +611,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat17']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat17']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat17']->postImage) }}"
                                         alt="{{ $news['cat17']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -656,7 +655,7 @@
                                         <div class="box-media">
                                             <a href="{{ url('news_details/' . $news['cat18']->id) }}">
                                                 <img class="img-responsive lead-img cat12Img"
-                                                    src="{{ asset('/upload/' . $news['cat18']->postImage) }}"
+                                                    src="{{ asset('public/upload/' . $news['cat18']->postImage) }}"
                                                     alt="{{ $news['cat18']->postTitle }}"
                                                     style="width: 100%; height: 300px; width:100%;">
                                             </a>
@@ -687,7 +686,7 @@
                                     <div class="article-box">
                                         <div class="media-left">
                                             <a href="{{ url('news_details/' . $cat18Title->id) }}">
-                                                <img src="{{ asset('/upload/' . $cat18Title->postImage) }}"
+                                                <img src="{{ asset('public/upload/' . $cat18Title->postImage) }}"
                                                     alt="{{ $cat18Title->postTitle }}" style="height: 50px; width: 80px;">
                                             </a>
                                         </div>
@@ -720,7 +719,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat43']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat43']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat43']->postImage) }}"
                                         alt="{{ $news['cat43']->postTitle }}" style="width: 100%; height: 148px;">
                                 </a>
                             </div>
@@ -759,7 +758,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat20']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat20']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat20']->postImage) }}"
                                         alt="{{ $news['cat20']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -794,7 +793,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat6']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat6']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat6']->postImage) }}"
                                         alt="{{ $news['cat6']->postTitle }}" style="height: 150px; width: 100%;">
                                 </a>
                             </div>
@@ -828,7 +827,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat31']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat31']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat31']->postImage) }}"
                                         alt="{{ $news['cat31']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -862,7 +861,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat32']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat32']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat32']->postImage) }}"
                                         alt="{{ $news['cat32']->postTitle }}" style="height: 150px; width: 100%;">
                                 </a>
                             </div>
@@ -897,7 +896,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat5']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat5']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat5']->postImage) }}"
                                         alt="{{ $news['cat5']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -933,7 +932,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat7']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat7']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat7']->postImage) }}"
                                         alt="{{ $news['cat7']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -974,7 +973,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat21']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat21']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat21']->postImage) }}"
                                         alt="{{ $news['cat21']->postTitle }}" style="width: 100%; height: 153px;">
                                 </a>
                             </div>
@@ -1010,7 +1009,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat24']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat24']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat24']->postImage) }}"
                                         alt="{{ $news['cat24']->postTitle }}" style="width: 100%; height: 153px;">
                                 </a>
                             </div>
@@ -1059,7 +1058,7 @@
                                             <div class="carousel-inner">
                                                 @foreach ($news['cat22Title'] as $key => $photo)
                                                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                                    <img src="{{ asset('/upload/' . $photo->postImage) }}"
+                                                    <img src="{{ asset('public/upload/' . $photo->postImage) }}"
                                                         alt="{{ $photo->postTitle }}" class="d-block" style="width:100%" ;
                                                         height="358px;">
                                                     <div class="carousel-caption">
@@ -1083,7 +1082,7 @@
                                     <div class="content-body mt-2">
                                         <a href="{{ $data['adds9']->adds_link }}">
                                             <img class="img-responsive"
-                                                src="{{ asset('/upload/' . $data['adds9']->addsImg) }}" alt="adds"
+                                                src="{{ asset('public/upload/' . $data['adds9']->addsImg) }}" alt="adds"
                                                 style="width: 100%; height: auto;">
                                         </a>
                                     </div>
@@ -1108,7 +1107,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat23']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat23']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat23']->postImage) }}"
                                         alt="{{ $news['cat23']->postTitle }}" style="width: 100%; height: 153px;">
                                 </a>
                             </div>
@@ -1142,7 +1141,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat25']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat25']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat25']->postImage) }}"
                                         alt="{{ $news['cat25']->postTitle }}" style="width: 100%; height: 153px;">
                                 </a>
                             </div>
@@ -1182,7 +1181,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat26']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat26']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat26']->postImage) }}"
                                         alt="{{ $news['cat26']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -1217,7 +1216,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat27']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat27']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat27']->postImage) }}"
                                         alt="{{ $news['cat27']->postTitle }}" style="height: 150px; width: 100%;">
                                 </a>
                             </div>
@@ -1253,7 +1252,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat29']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat29']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat29']->postImage) }}"
                                         alt="{{ $news['cat29']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -1291,7 +1290,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat30']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat30']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat30']->postImage) }}"
                                         alt="{{ $news['cat30']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -1327,7 +1326,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat33']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat33']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat33']->postImage) }}"
                                         alt="{{ $news['cat33']->postTitle }}" style="height: 150px; width:100%;">
                                 </a>
                             </div>
@@ -1373,7 +1372,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat42']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat42']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat42']->postImage) }}"
                                         alt="{{ $news['cat42']->postTitle }}" style="width: 100%; height: 153px;">
                                 </a>
                             </div>
@@ -1409,7 +1408,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat37']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat37']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat37']->postImage) }}"
                                         alt="{{ $news['cat37']->postTitle }}" style="width: 100%; height: 153px;">
                                 </a>
                             </div>
@@ -1449,7 +1448,7 @@
                                         <div class="box-media">
                                             <a href="{{ url('news_details/' . $news['cat36']->id) }}">
                                                 <img class="img-responsive lead-img cat12Img"
-                                                    src="{{ asset('/upload/' . $news['cat36']->postImage) }}"
+                                                    src="{{ asset('public/upload/' . $news['cat36']->postImage) }}"
                                                     alt="{{ $news['cat36']->postTitle }}"
                                                     style="width: 100%; height: 325px;">
                                             </a>
@@ -1481,7 +1480,7 @@
                                     <div class="article-box">
                                         <div class="media-left">
                                             <a href="{{ url('news_details/' . $cat36Title->id) }}">
-                                                <img src="{{ asset('/upload/' . $cat36Title->postImage) }}"
+                                                <img src="{{ asset('public/upload/' . $cat36Title->postImage) }}"
                                                     alt="{{ $cat36Title->postTitle }}" style="width: 90px; height: 50px;">
                                             </a>
                                         </div>
@@ -1518,7 +1517,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat38']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat38']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat38']->postImage) }}"
                                         alt="{{ $news['cat38']->postTitle }}" style="width: 100%; height: 160px;">
                                 </a>
                             </div>
@@ -1554,7 +1553,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat39']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat39']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat39']->postImage) }}"
                                         alt="{{ $news['cat39']->postTitle }}" style="width: 100%; height: 160px;">
                                 </a>
                             </div>
@@ -1589,7 +1588,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat40']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat40']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat40']->postImage) }}"
                                         alt="{{ $news['cat40']->postTitle }}" style="width: 100%; height: 160px;">
                                 </a>
                             </div>
@@ -1624,7 +1623,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat41']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat41']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat41']->postImage) }}"
                                         alt="{{ $news['cat41']->postTitle }}" style="width: 100%; height: 160px;">
                                 </a>
                             </div>
@@ -1664,7 +1663,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat44']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat44']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat44']->postImage) }}"
                                         alt="{{ $news['cat44']->postTitle }}" style="width: 100%; height: 160px;">
                                 </a>
                             </div>
@@ -1699,7 +1698,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat45']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat45']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat45']->postImage) }}"
                                         alt="{{ $news['cat45']->postTitle }}" style="width: 100%; height: 160px;">
                                 </a>
                             </div>
@@ -1734,7 +1733,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat47']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat47']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat47']->postImage) }}"
                                         alt="{{ $news['cat47']->postTitle }}" style="width: 100%; height: 160px;">
                                 </a>
                             </div>
@@ -1770,7 +1769,7 @@
                             <div class="box-media m-t-1">
                                 <a href="{{ url('news_details/' . $news['cat48']->id) }}">
                                     <img class="img-responsive cat-media-img-min"
-                                        src="{{ asset('/upload/' . $news['cat48']->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news['cat48']->postImage) }}"
                                         alt="{{ $news['cat48']->postTitle }}" style="width: 100%; height: 160px;">
                                 </a>
                             </div>

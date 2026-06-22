@@ -61,7 +61,7 @@
                     @if ($count < 3)
                         <div class="col-sm-6 col-xl-4 mg-t-20 mg-xl-t-0">
                             <div class="card pd-20 bg-white">
-                                <img class="card-img-top" src="{{ asset('/upload/' . $item->postImage)}}" style="width:100%"
+                                <img class="card-img-top" src="{{ asset('public/upload/' . $item->postImage)}}" style="width:100%"
                                     height="250px">
                                 <div class="card-body">
                                     <p class="card-text">

@@ -9,7 +9,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <a href="index.php">
                             <img class="img-responsive m-l-1 footerlogo"
-                                src="{{ asset('/upload/' . $basicInfo->footerLogo) }}" alt="main-logo">
+                                src="{{ asset('public/upload/' . $basicInfo->footerLogo) }}" alt="main-logo">
                         </a>
                     </div>
 

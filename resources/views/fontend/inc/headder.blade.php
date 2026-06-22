@@ -10,7 +10,7 @@
     @endphp
     <title> @yield('title') | {{ $basicInfo->name }}</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('/upload/' . $basicInfo->fav_icon) }}">
+    <link rel="icon" type="image/png" href="{{ asset('public/upload/' . $basicInfo->fav_icon) }}">
 
     @yield('metalink')
 
@@ -31,7 +31,7 @@
         href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100&family=Montserrat:wght@400;500&family=Nunito:ital,wght@0,600;0,700;1,500&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
-    <link href="{{ asset('') }}fontend/style.css" rel="stylesheet">
+    <link href="{{ asset('public') }}/fontend/style.css" rel="stylesheet">
     <style>
         .content-container {
             max-width: 1200px !important;
@@ -46,7 +46,7 @@
                 <!-- =================== Logo ========================== -->
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <a href="{{ url('/') }}">
-                        <img class="dp-main-logo img-responsive" src="{{ asset('/upload/' . $basicInfo->logo) }}"
+                        <img class="dp-main-logo img-responsive" src="{{ asset('public/upload/' . $basicInfo->logo) }}"
                             alt="main-logo">
                     </a>
                 </div>
@@ -58,7 +58,7 @@
                     <div class="box-ad m-top-1 m-t-1">
                         @if ($adds)
                             <a href="{{ $adds->adds_link }}" target="_blank">
-                                <img class="img-responsive ads-img" src="{{ asset('/upload/' . $adds->addsImg) }}"
+                                <img class="img-responsive ads-img" src="{{ asset('public/upload/' . $adds->addsImg) }}"
                                     style="width: 92%; height: 85px; margin-top: 18px;">
                             </a>
                         @endif

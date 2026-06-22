@@ -44,18 +44,20 @@
                                     </tr>
                                     <tr>
                                         <th class="pt-5"> Fav Icon</th>
-                                        <td class="text-center"><img src="{{ asset('/upload/' . $basicInfo->fav_icon) }}"
-                                                width="200" height="80" alt=""></td>
+                                        <td class="text-center"><img
+                                                src="{{ asset('public/upload/' . $basicInfo->fav_icon) }}" width="200"
+                                                height="80" alt=""></td>
                                     </tr>
                                     <tr>
                                         <th class="pt-5"> Logo</th>
-                                        <td class="text-center"><img src="{{ asset('/upload/' . $basicInfo->logo) }}"
+                                        <td class="text-center"><img src="{{ asset('public/upload/' . $basicInfo->logo) }}"
                                                 width="200" height="80" alt=""></td>
                                     </tr>
                                     <tr>
                                         <th class="pt-5">Footer Logo</th>
-                                        <td class="text-center"><img src="{{ asset('/upload/' . $basicInfo->footerLogo) }}"
-                                                width="200" height="80" alt=""></td>
+                                        <td class="text-center"><img
+                                                src="{{ asset('public/upload/' . $basicInfo->footerLogo) }}" width="200"
+                                                height="80" alt=""></td>
                                     </tr>
                                     <tr>
                                         <th>Facebook Link</th>

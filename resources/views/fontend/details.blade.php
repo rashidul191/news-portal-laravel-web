@@ -16,7 +16,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ $news->postTitle }}" />
     <meta property="og:description" content="{{ $news->postBody }}" />
-    <meta property="og:image" content="{{ asset('/upload/' . $news->postImage) }}" alt="{{ $news->postTitle }}" />
+    <meta property="og:image" content="{{ asset('public/upload/' . $news->postImage) }}" alt="{{ $news->postTitle }}" />
 
 
     <div id="fb-root"></div>
@@ -96,7 +96,7 @@
                             <div class="single-content-body">
                                 <div class="single-article-content">
                                     <img class="img-responsive lead-img-slide"
-                                        src="{{ asset('/upload/' . $news->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news->postImage) }}"
                                         alt="{{ $news->postTitle }}" style="width: 100%; height: auto!important;">
                                     @php
                                         echo $news->postBody;

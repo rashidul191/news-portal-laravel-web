@@ -17,14 +17,11 @@
         {{-- {{ $profile? $profile->cname : '' }} --}}
     </title>
     {{--
-    <link rel="icon" type="image/svg+xml" href="{{ asset('/upload/' . $profile->favIcon) }}"> --}}
+    <link rel="icon" type="image/svg+xml" href="{{ asset('public/upload/' . $profile->favIcon) }}"> --}}
     <!-- General CSS Files -->
 
 
-
-    {{--
-    <link rel="stylesheet" href="{{ asset('') }}login/style.css"> --}}
-    <link rel="stylesheet" href="{{ asset('') }}login/style.css">
+    <link rel="stylesheet" href="{{ asset('public')}}/login/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +39,7 @@
             <div class="form-container">
                 <div style="text-align: center;">
                     {{-- @if ($profile)
-                    <img src="{{ asset('/upload/' . $profile->logo) }}" alt="illustration" class="illustration" />
+                    <img src="{{ asset('public/upload/' . $profile->logo) }}" alt="illustration" class="illustration" />
                     @endif --}}
                 </div>
 
@@ -80,7 +77,7 @@
         {{-- <div class="theme-btn-container"></div> --}}
     </section>
 </body>
-<script src="{{ asset('') }}login/script.js"></script>
+<script src="{{ asset('public') }}/login/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>

@@ -60,8 +60,8 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>
-                                                <img src="{{ asset('/upload/' . $item->addsImg) }}" width="250" height="80"
-                                                    alt="">
+                                                <img src="{{ asset('public/upload/' . $item->addsImg) }}" width="250"
+                                                    height="80" alt="">
                                             </td>
                                             <td>{{ $item->adds_link }} </td>
 

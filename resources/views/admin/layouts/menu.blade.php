@@ -3,7 +3,8 @@
 @endphp
 <div class="sl-logo ">
     <a href="{{ route('admin.dashboard') }}">
-        <img src="{{ asset('/upload/' . $basicInfo->logo) }}" alt="{{ $basicInfo->name }}" width="190px" height="40px">
+        <img src="{{ asset('public/upload/' . $basicInfo->logo) }}" alt="{{ $basicInfo->name }}" width="190px"
+            height="40px">
     </a>
 </div>
 <div class="sl-sideleft">

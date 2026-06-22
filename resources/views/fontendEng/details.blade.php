@@ -16,7 +16,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ $news->postTitle_eng }}" />
     <meta property="og:description" content="{{ $news->postBody_eng }}" />
-    <meta property="og:image" content="{{ asset('/upload/' . $news->postImage) }}" alt="{{ $news->postTitle_eng }}" />
+    <meta property="og:image" content="{{ asset('public/upload/' . $news->postImage) }}" alt="{{ $news->postTitle_eng }}" />
 
 
     <div id="fb-root"></div>
@@ -37,7 +37,7 @@
                                         ->first();
                                 @endphp
                                 @if ($category)
-                                    <a href="{{ route('english_category' , $category->id) }}">
+                                    <a href="{{ route('english_category', $category->id) }}">
                                         <h4 class="cat-title">{{ $category->name_eng }}</h4>
                                     </a>
                                 @endif
@@ -71,20 +71,20 @@
 
                                             <iframe
                                                 src="https://www.facebook.com/plugins/share_button.php?href=https://dhakapress24.com/english/news_details/{{ $news->id }}&layout=button_count&size=small&width=78&height=20&appId"
-                                                width="78" height="20" style="border:none;overflow:hidden"
-                                                scrolling="no" frameborder="0" allowfullscreen="true"
+                                                width="78" height="20" style="border:none;overflow:hidden" scrolling="no"
+                                                frameborder="0" allowfullscreen="true"
                                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
 
                                         </li>
                                         <li>
-                                            <a href="{{ route('english_news_details' , $news->id) }}" class="twitter-share-button"
-                                                data-show-count="false">Tweet</a>
+                                            <a href="{{ route('english_news_details', $news->id) }}"
+                                                class="twitter-share-button" data-show-count="false">Tweet</a>
                                             <script async src="platform.twitter.com/widgets.js" charset="utf-8"></script>
                                         </li>
                                         <li>
                                             <a href="#" onclick="window.print()">
-                                                <i class="fa fa-print"aria-hidden="true"></i>
+                                                <i class="fa fa-print" aria-hidden="true"></i>
                                             </a>
                                         </li>
                                         <li>- VIEW : {{ $news->views }}</li>
@@ -94,7 +94,7 @@
                             <div class="single-content-body">
                                 <div class="single-article-content">
                                     <img class="img-responsive lead-img-slide"
-                                        src="{{ asset('/upload/' . $news->postImage) }}"
+                                        src="{{ asset('public/upload/' . $news->postImage) }}"
                                         alt="{{ $news->postTitle_eng }}" style="width: 100%; height: auto!important;">
                                     @php
                                         echo $news->postBody;
@@ -105,9 +105,8 @@
                     </div>
                     <!-- ==================== Facebook-comment-box ===================== -->
                     <div class="box-card p-1 hidden-print">
-                        <div class="fb-comments"
-                            data-href="https://reseller.bestwinbazarltd.com/DGTIMES/{{ $news->id }}" data-width="100%"
-                            data-numposts="3"></div>
+                        <div class="fb-comments" data-href="https://reseller.bestwinbazarltd.com/DGTIMES/{{ $news->id }}"
+                            data-width="100%" data-numposts="3"></div>
                     </div>
                     <!-- =======================./Single-news=========================== -->
 
@@ -127,7 +126,7 @@
                                 <ul class="list-article list-scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
                                     @foreach ($data as $item)
                                         <li class="list-item-article">
-                                            <a href="{{ route('english_news_details' , $item->id) }}">{{ $item->postTitle }}</a>
+                                            <a href="{{ route('english_news_details', $item->id) }}">{{ $item->postTitle }}</a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -154,16 +153,17 @@
             </style>
         </div>
     </section>
-    {{-- <script>
-        document.getElementById('fbShareBtn').addEventListener('click', function(event) {
+    {{--
+    <script>
+        document.getElementById('fbShareBtn').addEventListener('click', function (event) {
             event.preventDefault();
             FB.ui({
                 method: 'share',
                 href: '{{$basicInfo->website_link}}news_details/{{ $news->id }}',
-            }, function(response) {});
+            }, function (response) { });
         });
 
-        document.getElementById('twitterShareBtn').addEventListener('click', function(event) {
+        document.getElementById('twitterShareBtn').addEventListener('click', function (event) {
             event.preventDefault();
             var url = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(
                 '{{$basicInfo->website_link}}news_details/{{ $news->id }}');

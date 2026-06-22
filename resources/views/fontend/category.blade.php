@@ -27,14 +27,15 @@
                                     <div class="article-box">
                                         <div class="media-left">
                                             <a href="{{ url('news_details/' . $n->id) }}">
-                                                <img src="{{ asset('/upload/' . $n->postImage) }}"
+                                                <img src="{{ asset('public/upload/' . $n->postImage) }}"
                                                     alt="{{ $n->postTitle }}" style="width: 100%; height: 120px;">
                                             </a>
                                         </div>
                                         <div class="media-right">
                                             <a href="{{ url('news_details/' . $n->id) }}">
                                                 <h4 class="article-title">
-                                                    {{ $n->postTitle }}</h4>
+                                                    {{ $n->postTitle }}
+                                                </h4>
                                             </a>
                                         </div>
                                     </div>
@@ -63,7 +64,7 @@
                         <div class="article-box">
                             <div class="list-header">
                                 <a href="{{ url('archive') }}">
-                                    <h4 class="list-title">  সর্বশেষ খবর  </h4>
+                                    <h4 class="list-title"> সর্বশেষ খবর </h4>
                                 </a>
                             </div>
                             <div class="list-body">
