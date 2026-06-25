@@ -11,12 +11,12 @@ class EnglishNewsController extends Controller
 {
     public function index()
     {
-        $news = EnglishNews::orderBy('id','desc')->paginate(10);
+        $news = EnglishNews::orderBy('id', 'desc')->paginate(10);
         return view('admin.NewsManageEnglish.index', compact('news'));
     }
     public function create()
     {
-        $category = Category::orderBy('id','asc')->get();
+        $category = Category::orderBy('id', 'asc')->get();
         return view('admin.NewsManageEnglish.create', compact('category'));
     }
     public function store(Request $request)
@@ -55,33 +55,52 @@ class EnglishNewsController extends Controller
     public function edit($id)
     {
         $news = EnglishNews::find($id);
-        $category = Category::where('status', 0)->orderBy('id','desc')->get();
+        $category = Category::where('status', 0)->orderBy('id', 'desc')->get();
         return view('admin.NewsManageEnglish.edit', compact('news', 'category'));
     }
     public function update(Request $request, $id)
     {
         $news = EnglishNews::find($id);
-        $image = $request->postImage;
-        $data =
-        [
-            'postTitle'=>$request->postTitle,
-            'postBody'=>$request->postBody,
-            'category'=>$request->category,
-            'featherPost'=>$request->featherPost,
-            'treandingPost'=>$request->treandingPost,
-            'tag'=>$request->tag,
-            'description'=>$request->description,
-        ];
-        if(!empty($image)){
 
-            $imageImgName = "epostImg". time() . '.' .$image->getClientOriginalExtension();
-            $image->move(public_path('upload'),$imageImgName);
-            $oldimageLink = public_path('upload/'). $news->postImage;
-            unlink($oldimageLink);
+        if (!$news) {
+            Toastr::error('News not found!');
+            return redirect('english_news_manage');
+        }
+
+        $data = [
+            'postTitle' => $request->postTitle,
+            'postBody' => $request->postBody,
+            'category' => $request->category,
+            'featherPost' => $request->featherPost,
+            'treandingPost' => $request->treandingPost,
+            'tag' => $request->tag,
+            'description' => $request->description,
+        ];
+
+        $image = $request->postImage;
+
+        if (!empty($image)) {
+
+            // new image name
+            $imageImgName = "epostImg" . time() . '.' . $image->getClientOriginalExtension();
+
+            // upload new image
+            $image->move(public_path('upload'), $imageImgName);
+
+            // old image path
+            $oldImage = $news->postImage;
+            $oldImagePath = public_path('upload/' . $oldImage);
+
+            // ✅ SAFE unlink (no error)
+            if (!empty($oldImage) && file_exists($oldImagePath)) {
+                unlink($oldImagePath);
+            }
+
             $data['postImage'] = $imageImgName;
         }
 
         $news->update($data);
+
         Toastr::success('Update successfully!');
         return redirect('english_news_manage');
     }
@@ -89,8 +108,8 @@ class EnglishNewsController extends Controller
     {
         $news = EnglishNews::find($id);
         $imageDB = $news->postImage;
-        if($imageDB){
-            unlink(public_path('upload/').$imageDB);
+        if ($imageDB) {
+            unlink(public_path('upload/') . $imageDB);
         }
         $news->delete();
         Toastr::success('Delete successfully!');

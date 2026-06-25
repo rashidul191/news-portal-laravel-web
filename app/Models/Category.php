@@ -12,5 +12,16 @@ class Category extends Model
         'name',
         'name_eng',
         'status',
+        'serial'
     ]);
+
+
+    public function news()
+    {
+        return $this->hasMany(News::class, 'category', 'id');
+    }
+    public function englishNews()
+    {
+        return $this->hasMany(EnglishNews::class, 'category', 'id');
+    }
 }

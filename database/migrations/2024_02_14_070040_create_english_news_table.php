@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('english_news', function (Blueprint $table) {
             $table->id();
-            $table->string('category')->nullable();
+            $table->foreignId('category_id')->constrained('categories');
             $table->longText('postTitle')->nullable();
             $table->longText('postBody')->nullable();
             $table->string('featherPost')->nullable();

@@ -11,12 +11,12 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::orderBy('id','desc')->paginate(10);
+        $news = News::orderBy('id', 'desc')->paginate(10);
         return view('admin.NewsManage.index', compact('news'));
     }
     public function create()
     {
-        $category = Category::orderBy('id','asc')->get();
+        $category = Category::orderBy('id', 'asc')->get();
         return view('admin.NewsManage.create', compact('category'));
     }
     public function store(Request $request)
@@ -60,36 +60,56 @@ class NewsController extends Controller
     public function edit($id)
     {
         $news = News::find($id);
-        $category = Category::where('status', 0)->orderBy('id','desc')->get();
+        $category = Category::where('status', 0)->orderBy('id', 'desc')->get();
         return view('admin.NewsManage.edit', compact('news', 'category'));
     }
     public function update(Request $request, $id)
     {
         $news = News::find($id);
-        $image = $request->postImage;
-        $data =
-        [
-            'postTitle'=>$request->postTitle,
-            'postBody'=>$request->postBody,
-            'category'=>$request->category,
-            'featherPost'=>$request->featherPost,
-            'treandingPost'=>$request->treandingPost,
-            'tag'=>$request->tag,
-            'description'=>$request->description,
-            'postTitle_eng'=>$request->postTitle_eng,
-            'auther_eng'=>$request->auther_eng,
-            'postBody_eng'=>$request->postBody_eng,
-        ];
-        if(!empty($image)){
 
-            $imageImgName = "postImg". time() . '.' .$image->getClientOriginalExtension();
-            $image->move(public_path('upload'),$imageImgName);
-            $oldimageLink = public_path('upload/'). $news->postImage;
-            unlink($oldimageLink);
+        if (!$news) {
+            Toastr::error('News not found!');
+            return redirect('news/manage');
+        }
+
+        $data = [
+            'postTitle' => $request->postTitle,
+            'postBody' => $request->postBody,
+            'category' => $request->category,
+            'featherPost' => $request->featherPost,
+            'treandingPost' => $request->treandingPost,
+            'tag' => $request->tag,
+            'description' => $request->description,
+            'postTitle_eng' => $request->postTitle_eng,
+            'auther_eng' => $request->auther_eng,
+            'postBody_eng' => $request->postBody_eng,
+        ];
+
+        $image = $request->postImage;
+
+        if (!empty($image)) {
+
+            // new image name
+            $imageImgName = "postImg" . time() . '.' . $image->getClientOriginalExtension();
+
+            // upload new image
+            $image->move(public_path('upload'), $imageImgName);
+
+            // old image path
+            $oldImage = $news->postImage;
+            $oldImagePath = public_path('upload/' . $oldImage);
+
+            // ✅ SAFE unlink (no error)
+            if (!empty($oldImage) && file_exists($oldImagePath)) {
+                unlink($oldImagePath);
+            }
+
+            // update image field
             $data['postImage'] = $imageImgName;
         }
 
         $news->update($data);
+
         Toastr::success('Update successfully!');
         return redirect('news/manage');
     }
@@ -97,8 +117,8 @@ class NewsController extends Controller
     {
         $news = News::find($id);
         $imageDB = $news->postImage;
-        if($imageDB){
-            unlink(public_path('upload/').$imageDB);
+        if (file_exists($imageDB)) {
+            unlink(public_path('upload/') . $imageDB);
         }
         $news->delete();
         Toastr::success('Delete successfully!');
