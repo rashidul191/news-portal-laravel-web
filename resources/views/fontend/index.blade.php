@@ -59,7 +59,7 @@
                                                 </div>
                                                 <div class="content-body">
                                                     @if ($data['newsLead'])
-                                                        {!! Str::limit($data['newsLead']->postBody, 230) !!}
+                                                        {!! Str::limit($data['newsLead']->postBody, 225) !!}
                                                     @endif
                                                 </div>
                                             </div>
@@ -86,7 +86,7 @@
                                                             </a>
                                                         </div>
                                                         <div class="content-body">
-                                                            {!! Str::limit($slide->postBody, 230) !!}
+                                                            {!! Str::limit($slide->postBody, 225) !!}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -206,7 +206,7 @@
                                 <div class="cat-header">
                                     <a href="{{ url('category/' . $category->id) }}">
                                         <h4
-                                            style="color: #BB1919; border-bottom: 3px solid #BB1919; padding: 15px 10px; font-weight: bold;">
+                                            style="color: #BB1919; border-top: 3px solid #BB1919; border-bottom: 3px solid #BB1919; padding: 15px 10px; font-weight: bold;">
                                             {{ $category->name }}
                                         </h4>
                                     </a>

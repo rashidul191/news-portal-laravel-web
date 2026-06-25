@@ -40,7 +40,8 @@
 </head>
 
 <body>
-    <div class="container-fluid box-card m-b-0">
+    <div class="container-fluid box-card m-b-0" style=" border-top: 5px solid #BB1919;">
+
         <div class="no-border container content-container">
             <div class="row">
                 <!-- =================== Logo ========================== -->
@@ -159,7 +160,7 @@
                         </a>
                     </li>
                     <?php
-$category = DB::table('categories')->where('status', 0)->orderBy('id', 'asc')->limit(7)->get();
+$category = DB::table('categories')->where('status', 0)->orderBy('id', 'asc')->limit(14)->get();
                     ?>
                     @foreach ($category as $c)
                         <li class="nav-item">
