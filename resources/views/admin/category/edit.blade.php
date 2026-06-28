@@ -28,9 +28,16 @@
                                         value="{{ $category->name_eng }}" />
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-2">
                                 <div class="form-group">
-                                    <label for="validationCustom01" class="form-label">Status</label>
+                                    <label for="serial" class="form-label">Serial</label>
+                                    <input type="text" class="form-control" id="serial" name="serial"
+                                        value="{{ $category->serial }}" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="status" class="form-label">Status</label>
                                     <select name="status" id="status" class="form-control">
                                         @if ($category->status == 0)
                                             <option value='{{ $category->status }}' selected>Active</option>

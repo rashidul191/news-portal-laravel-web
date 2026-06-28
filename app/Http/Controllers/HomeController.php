@@ -30,15 +30,15 @@ class HomeController extends Controller
 
         $data['featherPost1'] = News::where('treandingPost', 'Yes')->orderBy('id', 'desc')->limit(9)->get();
 
-        $data['newsLatest'] = News::orderBy('id', 'desc')->limit(11)->get();
-        $data['newsPopular'] = News::orderBy('views', 'desc')->limit(11)->get();
+        $data['newsLatest'] = News::orderBy('id', 'desc')->take(8)->get();
+        $data['newsPopular'] = News::orderBy('views', 'desc')->take(8)->get();
 
         $categories = Category::where('status', 0)
             ->with([
                 'news' => function ($query) {
                     $query->latest();
                 }
-            ])
+            ])->orderBy('serial', 'asc')
             ->get();
         $ePaper = EPaper::orderBy('id', 'desc')->first();
 

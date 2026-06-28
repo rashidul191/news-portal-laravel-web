@@ -32,15 +32,15 @@ class HomeEnglishController extends Controller
 
         $data['featherPost1'] = EnglishNews::where('treandingPost', 'Yes')->orderBy('id', 'desc')->limit(9)->get();
 
-        $data['newsLatest'] = EnglishNews::orderBy('id', 'desc')->limit(11)->get();
-        $data['newsPopular'] = EnglishNews::orderBy('views', 'desc')->limit(11)->get();
+        $data['newsLatest'] = EnglishNews::orderBy('id', 'desc')->take(8)->get();
+        $data['newsPopular'] = EnglishNews::orderBy('views', 'desc')->take(8)->get();
 
         $categories = Category::where('status', 0)
             ->with([
                 'englishNews' => function ($query) {
                     $query->latest();
                 }
-            ])
+            ])->orderBy('serial', 'asc')
             ->get();
         $ePaper = EPaper::orderBy('id', 'desc')->first();
 

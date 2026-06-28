@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $category = Category::orderBy('id','asc')->get();
+        $category = Category::orderBy('serial', 'asc')->get();
         return view('admin.category.index', compact('category'));
     }
     public function create()
@@ -20,11 +20,12 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $data =
-        [
-            'name'=>$request->name,
-            'name_eng'=>$request->name_eng,
-            'status'=>$request->status,
-        ];
+            [
+                'name' => $request->name,
+                'name_eng' => $request->name_eng,
+                'serial' => $request->serial,
+                'status' => $request->status,
+            ];
         Category::create($data);
         Toastr::success('Added successfully!');
         return redirect()->back();
@@ -42,11 +43,12 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $data =
-        [
-            'name'=>$request->name,
-            'name_eng'=>$request->name_eng,
-            'status'=>$request->status,
-        ];
+            [
+                'name' => $request->name,
+                'name_eng' => $request->name_eng,
+                'serial' => $request->serial,
+                'status' => $request->status,
+            ];
         $category->update($data);
         Toastr::success('Update successfully!');
         return redirect('category');

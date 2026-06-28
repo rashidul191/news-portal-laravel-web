@@ -17,19 +17,26 @@
                                 <div class="form-group">
                                     <label for="validationCustom01" class="form-label">Category Name Bangla</label>
                                     <input type="text" class="form-control" id="name" name="name"
-                                        placeholder="Enter Category Name Bangla" required/>
+                                        placeholder="Enter Category Name Bangla" required />
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="validationCustom01" class="form-label">Category Name English</label>
                                     <input type="text" class="form-control" id="name_eng" name="name_eng"
-                                        placeholder="Enter Category Name English" required/>
+                                        placeholder="Enter Category Name English" required />
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-2">
                                 <div class="form-group">
-                                    <label for="validationCustom01" class="form-label">Status</label>
+                                    <label for="serial" class="form-label">Serial</label>
+                                    <input type="number" class="form-control" id="serial" name="serial"
+                                        placeholder="Enter serial" required />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="status" class="form-label">Status</label>
                                     <select name="status" id="status" class="form-control" required>
                                         <option value="0">Active</option>
                                         <option value="1">Inactive</option>
@@ -56,12 +63,13 @@
                                         <th>SN</th>
                                         <th>Category Name Bangla</th>
                                         <th>Category Name English</th>
+                                        <th>Serial</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <style>
-                                    td{
+                                    td {
                                         color: #000;
                                     }
                                 </style>
@@ -71,6 +79,7 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->name_eng }}</td>
+                                            <td>{{ $item->serial }}</td>
                                             <td>
                                                 @if ($item->status == 0)
                                                     {{ 'Active' }}
@@ -79,7 +88,7 @@
                                                 @endif
                                             </td>
                                             <td style="width:150px;">
-                                                <a href="{{ url('category/'. $item->id . '/edit') }}" class="btn btn-primary">
+                                                <a href="{{ url('category/' . $item->id . '/edit') }}" class="btn btn-primary">
                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                 </a>
                                                 {{-- <a href="{{ url('category/'. $item->id) }}" class="btn btn-danger">
