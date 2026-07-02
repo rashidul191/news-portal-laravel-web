@@ -25,7 +25,7 @@
                             <div class="box-card">
                                 <div class="">
                                     <div class="cat-header">
-                                        <a href="{{ url('category/' . $category->id) }}">
+                                        <a href="{{ url('english/category/' . $category->id) }}">
                                             <h4
                                                 style="color: #BB1919; border-top: 3px solid #BB1919; border-bottom: 3px solid #BB1919; padding: 15px 10px; font-weight: bold;">
                                                 {{ $category->name_eng }}
@@ -38,14 +38,14 @@
                                                 <div style="background: #fff">
                                                     <div class="article-box">
                                                         <div class="media-left">
-                                                            <a href="{{ url('news_details/' . $item->id) }}">
+                                                            <a href="{{ url('english/news_details/' . $item->id) }}">
                                                                 <img src="{{ asset('public/upload/' . $item->postImage) }}"
                                                                     alt="{{ $item->postTitle }}"
                                                                     style="width: 100px; height: 82px;">
                                                             </a>
                                                         </div>
                                                         <div class="media-right">
-                                                            <a href="{{ url('news_details/' . $item->id) }}">
+                                                            <a href="{{ url('english/news_details/' . $item->id) }}">
                                                                 <h4 class="article-title"> {{ $item->postTitle }}</h4>
                                                             </a>
                                                         </div>
@@ -184,7 +184,7 @@
                             <div class="my-custom-scrollbar">
                                 <div class="list-group">
                                     @foreach ($data['newsPopular'] as $nP)
-                                        <a href="{{ url('english_news_details/' . $nP->id) }}"
+                                        <a href="{{ url('english/news_details/' . $nP->id) }}"
                                             class="list-group-item news-item">
                                             <span class="news-icon">▶</span>
                                             <span class="news-text">{{ $nP->postTitle }}</span>
@@ -293,7 +293,7 @@
                         <div class="box-card">
                             <div class="">
                                 <div class="cat-header">
-                                    <a href="{{ url('category/' . $category->id) }}">
+                                    <a href="{{ url('english/category/' . $category->id) }}">
                                         <h4
                                             style="color: #BB1919; border-top: 3px solid #BB1919; border-bottom: 3px solid #BB1919; padding: 15px 10px; font-weight: bold;">
                                             {{ $category->name_eng }}
@@ -306,13 +306,13 @@
                                             <div style="background: #fff">
                                                 <div class="article-box">
                                                     <div class="media-left">
-                                                        <a href="{{ url('news_details/' . $item->id) }}">
+                                                        <a href="{{ url('english/news_details/' . $item->id) }}">
                                                             <img src="{{ asset('public/upload/' . $item->postImage) }}"
                                                                 alt="{{ $item->postTitle }}" style="width: 100px; height: 82px;">
                                                         </a>
                                                     </div>
                                                     <div class="media-right">
-                                                        <a href="{{ url('news_details/' . $item->id) }}">
+                                                        <a href="{{ url('english/news_details/' . $item->id) }}">
                                                             <h4 class="article-title"> {{ $item->postTitle }}</h4>
                                                         </a>
                                                     </div>

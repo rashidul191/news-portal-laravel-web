@@ -13,7 +13,7 @@ class HomeEnglishController extends Controller
 {
     public function index()
     {
-        $data['adds'] = AddsManage::orderBy('id', 'asc')->limit(4)->get();
+        $data['adds'] = AddsManage::orderBy('id', 'asc')->limit(3)->get();
         $data['addss'] = AddsManage::orderBy('id', 'asc')->skip(4)->take(4)->get();
         $data['addsss'] = AddsManage::orderBy('id', 'asc')->skip(6)->take(2)->get();
         $data['adds9'] = AddsManage::where('id', 9)->first();
