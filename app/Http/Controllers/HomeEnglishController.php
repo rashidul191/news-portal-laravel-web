@@ -30,7 +30,7 @@ class HomeEnglishController extends Controller
             ->limit(4)->get();
 
 
-        $data['featherPost1'] = EnglishNews::where('treandingPost', 'Yes')->orderBy('id', 'desc')->limit(9)->get();
+        $data['featherPost1'] = EnglishNews::where('treandingPost', 'Yes')->orderBy('id', 'desc')->limit(12)->get();
 
         $data['newsLatest'] = EnglishNews::orderBy('id', 'desc')->take(8)->get();
         $data['newsPopular'] = EnglishNews::orderBy('views', 'desc')->take(8)->get();

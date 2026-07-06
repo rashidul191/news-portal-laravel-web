@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function index()
     {
         $data['adds'] = AddsManage::orderBy('id', 'asc')->limit(3)->get();
-        
+
         $data['addss'] = AddsManage::orderBy('id', 'asc')->skip(4)->take(4)->get();
         $data['addsss'] = AddsManage::orderBy('id', 'asc')->skip(6)->take(2)->get();
         $data['adds9'] = AddsManage::where('id', 9)->first();
@@ -29,7 +29,7 @@ class HomeController extends Controller
             ->limit(4)->get();
 
 
-        $data['featherPost1'] = News::where('treandingPost', 'Yes')->orderBy('id', 'desc')->limit(9)->get();
+        $data['featherPost1'] = News::where('treandingPost', 'Yes')->orderBy('id', 'desc')->limit(12)->get();
 
         $data['newsLatest'] = News::orderBy('id', 'desc')->take(8)->get();
         $data['newsPopular'] = News::orderBy('views', 'desc')->take(8)->get();

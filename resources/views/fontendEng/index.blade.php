@@ -7,7 +7,16 @@
         <div class="container default-container content-container lr-border">
             <div class="row m-b-1">
                 @foreach ($data['adds'] as $a)
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                    <!--<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">-->
+                       <div class="col-12
+                        @if($loop->index == 0)
+                            col-sm-3 col-md-3 col-lg-3
+                        @elseif($loop->index == 1)
+                            col-sm-6 col-md-6 col-lg-6
+                        @else
+                            col-sm-3 col-md-3 col-lg-3
+                        @endif
+                    " style="padding: 2px 4px">
                         <div class="box-ad m-top-1 mt-2">
                             <a href="{{ $a->adds_link }}" target="_blank">
                                 <img class="img-responsive ads-img" src="{{ asset('public/upload/' . $a->addsImg) }}">
@@ -19,7 +28,7 @@
             <!-- ==========================./For-Advertisement-top====================== -->
 
             <div class="row m-b-1">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="padding: 0">
                     @foreach ($categories->where('serial', 1) as $category)
                         <div class="col-12">
                             <div class="box-card">
@@ -32,8 +41,8 @@
                                             </h4>
                                         </a>
                                     </div>
-                                    <div class="row" style="background: #f2f2f2">
-                                        @foreach ($category->englishNews->take(6) as $item)
+                                    <div class="row" style="background: #f2f2f2; margin:0 -4px" >
+                                        @foreach ($category->englishNews->take(5) as $item)
                                             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                                 <div style="background: #fff">
                                                     <div class="article-box">
