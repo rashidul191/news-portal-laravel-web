@@ -3,21 +3,23 @@
     {{ $news->postTitle }}
 @endsection
 @section('metalink')
-    <meta name="keywords" content="{{ $news->tag ?? 'Samobangla' }}">
-    <meta name="description" content="{{ $news->description ?? 'Samobangla' }}">
+@php
+    $domain = preg_replace('/^www\./', '', request()->getHost());
+@endphp
+    <meta name="keywords" content="{{ $news->tag ?? $domain }}">
+    <meta name="description" content="{{ $news->description ?? $domain }}">
 
-    <meta name="author" content="Samobangla.com">
-    <meta name="generator" content="Samobangla.com">
-    <meta name="developed by" content="Samobangla.com">
-    <meta name="developer" content="Samobangla.com">
+    <meta name="author" content="{{ $domain }}">
+    <meta name="generator" content="{{ $domain }}">
+    <meta name="developed by" content="{{ $domain }}">
+    <meta name="developer" content="{{ $domain }}">
     <meta name=fb:app_id property=fb:app_id content=244957282849423 />
 
-    <meta property="og:url" content="https://samobangla.com/news_details/{{ $news->id }}" />
+    <meta property="og:url" content="https://{{ $domain }}/news_details/{{ $news->id }}" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ $news->postTitle }}" />
+    <meta property="og:title" content="{!! $news->postTitle !!}" />
     <meta property="og:description" content="{{ $news->postBody }}" />
-    <meta property="og:image" content="{{ asset('public/upload/' . $news->postImage) }}" alt="{{ $news->postTitle }}" />
-
+    <meta property="og:image" content="{{ asset('public/upload/' . $news->postImage) }}" alt="{!! $news->postTitle !!}" />
 
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"
@@ -39,8 +41,7 @@
                                 @endphp
                                 @if ($category)
                                     <a href="{{ url('category/' . $category->id) }}">
-                                        <h4 class="cat-title">{{ $category->name }}
-                                        </h4>
+                                        <h4 class="cat-title">{{ $category->name }}</h4>
                                     </a>
                                 @endif
                             </div>
@@ -72,7 +73,7 @@
                                         <li>
 
                                             <iframe
-                                                src="https://www.facebook.com/plugins/share_button.php?href=https://samobangla.com/news_details/{{ $news->id }}&layout=button_count&size=small&width=78&height=20&appId"
+                                                src="https://www.facebook.com/plugins/share_button.php?href=https://{{ $domain }}/news_details/{{ $news->id }}&layout=button_count&size=small&width=78&height=20&appId"
                                                 width="78" height="20" style="border:none;overflow:hidden"
                                                 scrolling="no" frameborder="0" allowfullscreen="true"
                                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
@@ -156,20 +157,4 @@
             </style>
         </div>
     </section>
-    {{-- <script>
-        document.getElementById('fbShareBtn').addEventListener('click', function(event) {
-            event.preventDefault();
-            FB.ui({
-                method: 'share',
-                href: '{{$basicInfo->website_link}}news_details/{{ $news->id }}',
-            }, function(response) {});
-        });
-
-        document.getElementById('twitterShareBtn').addEventListener('click', function(event) {
-            event.preventDefault();
-            var url = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(
-                '{{$basicInfo->website_link}}news_details/{{ $news->id }}');
-            window.open(url, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0');
-        });
-    </script> --}}
 @endsection

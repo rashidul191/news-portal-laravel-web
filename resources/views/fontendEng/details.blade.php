@@ -3,20 +3,24 @@
     {{ $news->postTitle_eng }}
 @endsection
 @section('metalink')
-    <meta name="keywords" content="{{ $news->tag ?? 'Dhakapress24' }}">
-    <meta name="description" content="{{ $news->description ?? 'Dhakapress24' }}">
+    @php
+        $domain = preg_replace('/^www\./', '', request()->getHost());
+    @endphp
+    <meta name="keywords" content="{{ $news->tag ?? $domain }}">
+    <meta name="description" content="{{ $news->description ?? $domain }}">
 
-    <meta name="author" content="Dhakapress24.com">
-    <meta name="generator" content="Dhakapress24.com">
-    <meta name="developed by" content="Dhakapress24.com">
-    <meta name="developer" content="Dhakapress24.com">
+    <meta name="author" content="{{ $domain }}">
+    <meta name="generator" content="{{ $domain }}">
+    <meta name="developed by" content="{{ $domain }}">
+    <meta name="developer" content="{{ $domain }}">
     <meta name=fb:app_id property=fb:app_id content=244957282849423 />
 
-    <meta property="og:url" content="https://dhakapress24.com/english/news_details/{{ $news->id }}" />
+    <meta property="og:url" content="https://{{ $domain }}/english/news_details/{{ $news->id }}" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ $news->postTitle_eng }}" />
+    <meta property="og:title" content="{!! $news->postTitle_eng !!}" />
     <meta property="og:description" content="{{ $news->postBody_eng }}" />
-    <meta property="og:image" content="{{ asset('public/upload/' . $news->postImage) }}" alt="{{ $news->postTitle_eng }}" />
+    <meta property="og:image" content="{{ asset('public/upload/' . $news->postImage) }}"
+        alt="{!! $news->postTitle_eng !!}" />
 
 
     <div id="fb-root"></div>
@@ -70,7 +74,7 @@
                                         <li>
 
                                             <iframe
-                                                src="https://www.facebook.com/plugins/share_button.php?href=https://dhakapress24.com/english/news_details/{{ $news->id }}&layout=button_count&size=small&width=78&height=20&appId"
+                                                src="https://www.facebook.com/plugins/share_button.php?href=https://{{ $domain }}/english/news_details/{{ $news->id }}&layout=button_count&size=small&width=78&height=20&appId"
                                                 width="78" height="20" style="border:none;overflow:hidden" scrolling="no"
                                                 frameborder="0" allowfullscreen="true"
                                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
