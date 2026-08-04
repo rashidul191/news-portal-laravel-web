@@ -36,6 +36,7 @@ class NewsController extends Controller
             'postTitle_eng' => $request->postTitle_eng,
             'auther_eng' => $request->auther_eng,
             'postBody_eng' => $request->postBody_eng,
+            'date' => $request->date,
         ];
 
         // Handle image upload if exists
@@ -83,6 +84,7 @@ class NewsController extends Controller
             'postTitle_eng' => $request->postTitle_eng,
             'auther_eng' => $request->auther_eng,
             'postBody_eng' => $request->postBody_eng,
+            'date' => $request->date,
         ];
 
         $image = $request->postImage;

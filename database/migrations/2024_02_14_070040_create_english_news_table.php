@@ -23,6 +23,7 @@ return new class extends Migration {
             $table->string('auther')->nullable();
             $table->string('tag')->nullable();
             $table->longText('description')->nullable();
+            $table->dateTime('date');
             $table->timestamps();
         });
     }

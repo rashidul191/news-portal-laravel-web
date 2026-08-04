@@ -23,5 +23,6 @@ class News extends Model
         'postTitle_eng',
         'auther_eng',
         'postBody_eng',
+        'date'
     ]);
 }

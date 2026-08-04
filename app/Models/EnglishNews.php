@@ -20,5 +20,6 @@ class EnglishNews extends Model
         'auther',
         'tag',
         'description',
+        'date'
     ]);
 }

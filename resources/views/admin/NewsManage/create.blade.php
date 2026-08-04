@@ -92,6 +92,14 @@
                                     <input type="file" class="form-control" id="postImage" name="postImage" required />
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="date" class="form-label">Date</label>
+                                    <span style="color: red;">*</span>
+                                    <input  type="datetime-local" class="form-control" id="date" name="date"
+                                        value="{{ date('Y-m-d\TH:i') }}" required />
+                                </div>
+                            </div>
 
                             <div class="col-12 text-center mt-4">
                                 <button class="btn btn-primary" id="submitBtn" type="submit">SUBMIT</button>

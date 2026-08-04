@@ -32,6 +32,7 @@ class EnglishNewsController extends Controller
             'auther' => $request->auther,
             'tag' => $request->tag,
             'description' => $request->description,
+            'date' => $request->date,
         ];
 
         // Handle image upload if exists
@@ -75,6 +76,7 @@ class EnglishNewsController extends Controller
             'treandingPost' => $request->treandingPost,
             'tag' => $request->tag,
             'description' => $request->description,
+            'date' => $request->date,
         ];
 
         $image = $request->postImage;
