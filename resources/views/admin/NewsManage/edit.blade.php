@@ -107,15 +107,12 @@
                              <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="date" class="form-label">Date</label>
-                                    <span style="color: red;">*</span>
-
                                    <input
  type="datetime-local"
     class="form-control"
     id="date"
     name="date"
-       value="{{ old('date', $news->date ?? date('Y-m-d\TH:i')) }}"
-    required
+       value="{{ old('date', $news->date) }}"
 />
                                 </div>
                             </div>

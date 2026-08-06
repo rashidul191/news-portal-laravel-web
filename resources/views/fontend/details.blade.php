@@ -65,7 +65,7 @@
                                         {{ $news->auther }}
                                     </h6>
                                     <span class="article-time">
-                                        {{ \Carbon\Carbon::parse($news->date)->format('d-m-Y h:i:s A') }}
+                                           {{ \Carbon\Carbon::parse($news->date ?? $news->created_at)->format('d-m-Y h:i:s A') }}
                                     </span>
                                 </div>
                                 <div class="share-tools hidden-print">

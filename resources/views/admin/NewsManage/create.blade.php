@@ -95,9 +95,8 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="date" class="form-label">Date</label>
-                                    <span style="color: red;">*</span>
-                                    <input  type="datetime-local" class="form-control" id="date" name="date"
-                                        value="{{ date('Y-m-d\TH:i') }}" required />
+
+                                    <input  type="datetime-local" class="form-control" id="date" name="date"/>
                                 </div>
                             </div>
 

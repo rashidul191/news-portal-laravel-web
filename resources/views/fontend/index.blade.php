@@ -9,14 +9,15 @@
                 @foreach ($data['adds'] as $a)
                     {{-- <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"> --}}
                         <div class="col-12
-                                                @if($loop->index == 0)
-                                                    col-sm-3 col-md-3 col-lg-3
-                                                @elseif($loop->index == 1)
-                                                    col-sm-6 col-md-6 col-lg-6
-                                                @else
-                                                    col-sm-3 col-md-3 col-lg-3
-                                                @endif
-                                            " style="padding: 2px 4px">
+                                                                                                                                                                                                                        @if($loop->index == 0)
+                                                                                                                                                                                                                            col-sm-3 col-md-3 col-lg-3
+                                                                                                                                                                                                                        @elseif($loop->index == 1)
+                                                                                                                                                                                                                            col-sm-6 col-md-6 col-lg-6
+                                                                                                                                                                                                                        @else
+                                                                                                                                                                                                                            col-sm-3 col-md-3 col-lg-3
+                                                                                                                                                                                                                        @endif
+                                                                                                                                                                                                                    "
+                            style="padding: 2px 4px">
                             <div class="box-ad m-top-1 mt-2">
                                 <a href="{{ $a->adds_link }}" target="_blank">
                                     <img class="img-responsive ads-img" src="{{ asset('public/upload/' . $a->addsImg) }}">
@@ -43,7 +44,7 @@
                                         </div>
                                         <div class="row" style="background: #f2f2f2; margin:0 -4px">
                                             @foreach ($category->news->take(5) as $item)
-                                                <div class="col-12" >
+                                                <div class="col-12">
                                                     <div style="background: #fff">
                                                         <div class="article-box">
                                                             <div class="media-left">
@@ -70,7 +71,7 @@
                             </div>
                         @endforeach
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="home-lead">
                             <div id="main-home-lead" class="carousel slide " data-bs-ride="carousel">
                                 <!-- Indicators -->
@@ -249,14 +250,24 @@
                         <div class="row m-b-1">
                             <div class="col-12">
                                 <div class="box-ad">
-                                    <a href="{{ $data['adds9']->adds_link }}" target="_blank">
-                                        <img style="height: 130px" class="img-responsive ads-img-responsive ads-img"
-                                            src="{{ asset('public/upload/' . $data['adds9']->addsImg) }}">
-                                    </a>
+                                    @php
+                                        $basicInfo = DB::table('basic_infos')->first();
+                                     @endphp
+                                    <div id="fb-root"></div>
+                                    <script async defer crossorigin="anonymous"
+                                        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0">
+                                        </script>
+                                    <!-- Facebook Page Plugin -->
+                                    <div class="fb-page" data-href="{{ $basicInfo->fb_link }}" data-tabs="timeline"
+                                        data-width="" data-height="130" data-small-header="true"
+                                        data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                                        <blockquote cite="{{ $basicInfo->fb_link }}" class="fb-xfbml-parse-ignore">
+                                            <a href="{{ $basicInfo->fb_link }}">Faceook Page</a>
+                                        </blockquote>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <!-- ========================./Home-Lead-Section============================ -->
@@ -336,6 +347,43 @@
                             </div>
                         </div>
                     @endforeach
+                </div>
+
+
+                <div id="first-cat" class="row m-b-1">
+                    <div class="col-12">
+                        <div class="box-card">
+                            <div class="">
+                                <div class="cat-header">
+                                    <h4
+                                        style="color: #BB1919; border-top: 3px solid #BB1919; border-bottom: 3px solid #BB1919; padding: 15px 10px; font-weight: bold;">
+                                        Videos
+                                    </h4>
+                                </div>
+
+                                <div class="row" style="background: #f2f2f2">
+                                    @foreach ($data['videos'] as $item)
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                            <div style="background: #fff">
+                                                <div class="article-box">
+                                                  @php
+    $videoId = \Illuminate\Support\Str::after($item->embedCode, 'v=');
+@endphp
+
+<div class="ratio ratio-16x9">
+    <iframe
+        src="https://www.youtube.com/embed/{{ $videoId }}"
+        allowfullscreen>
+    </iframe>
+</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
     </section>

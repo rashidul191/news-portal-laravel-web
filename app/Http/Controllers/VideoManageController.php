@@ -10,16 +10,23 @@ class VideoManageController extends Controller
 {
     public function index()
     {
-        $video = VideoManage::where('id',1)->first();
-        return view('admin.Video.index', compact('video'));
+        $videos = VideoManage::latest()->paginate(10);
+        return view('admin.Video.index', compact('videos'));
     }
     public function create()
     {
-        //
+
     }
     public function store(Request $request)
     {
-        //
+        $data =
+            [
+                'title' => $request->title,
+                'embedCode' => $request->embedCode,
+            ];
+        VideoManage::create($data);
+        Toastr::success('Vdieo Add successfully!');
+        return redirect()->back();
     }
     public function show(VideoManage $videoManage)
     {
@@ -32,20 +39,23 @@ class VideoManageController extends Controller
     public function update(Request $request, $id)
     {
         $videoManage = VideoManage::find($id);
-    //    return $dd = $request->embedCode;
+        //    return $dd = $request->embedCode;
         // $code = substr($dd, 38, 61);
 
         $data =
-        [
-            'title'=>$request->title,
-            'embedCode'=>$request->embedCode,
-        ];
+            [
+                'title' => $request->title,
+                'embedCode' => $request->embedCode,
+            ];
         $videoManage->update($data);
         Toastr::success('Update successfully!');
         return redirect()->back();
     }
-    public function destroy(VideoManage $videoManage)
+    public function destroy($id)
     {
-        //
+        $video = VideoManage::find($id);
+        $video->delete();
+        Toastr::success('Delete successfully!');
+        return redirect('video/manage');
     }
 }

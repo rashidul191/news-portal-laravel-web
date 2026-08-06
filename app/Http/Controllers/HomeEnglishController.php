@@ -18,7 +18,7 @@ class HomeEnglishController extends Controller
         $data['addsss'] = AddsManage::orderBy('id', 'asc')->skip(6)->take(2)->get();
         $data['adds9'] = AddsManage::where('id', 9)->first();
 
-        $data['video'] = VideoManage::where('id', 1)->first();
+             $data['videos'] = VideoManage::orderBy('id', 'asc')->limit(6)->get();
 
         $data['newsLead'] = EnglishNews::where('featherPost', 'Yes')
             ->whereNotNull('postImage')
@@ -30,7 +30,7 @@ class HomeEnglishController extends Controller
             ->limit(4)->get();
 
 
-        $data['featherPost1'] = EnglishNews::where('treandingPost', 'Yes')->orderBy('id', 'desc')->limit(12)->get();
+        $data['featherPost1'] = EnglishNews::where('treandingPost', 'Yes')->orderBy('id', 'desc')->limit(15)->get();
 
         $data['newsLatest'] = EnglishNews::orderBy('id', 'desc')->take(8)->get();
         $data['newsPopular'] = EnglishNews::orderBy('views', 'desc')->take(8)->get();
