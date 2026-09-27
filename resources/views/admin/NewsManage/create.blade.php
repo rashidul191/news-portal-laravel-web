@@ -13,6 +13,14 @@
                         <form action="{{ url('news/manage') }}" method="post" enctype="multipart/form-data"
                             class="row g-3 p-1 m-1" novalidate>
                             @csrf
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="datetime-local" class="form-control" id="date" name="date" />
+                                </div>
+                            </div>
+
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="" class="form-label">Post Title </label> <span style="color: red;">*</span>
@@ -92,13 +100,7 @@
                                     <input type="file" class="form-control" id="postImage" name="postImage" required />
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="date" class="form-label">Date</label>
 
-                                    <input  type="datetime-local" class="form-control" id="date" name="date"/>
-                                </div>
-                            </div>
 
                             <div class="col-12 text-center mt-4">
                                 <button class="btn btn-primary" id="submitBtn" type="submit">SUBMIT</button>

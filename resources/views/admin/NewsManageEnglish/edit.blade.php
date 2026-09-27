@@ -14,6 +14,21 @@
                             class="row g-3 needs-validation p-1 m-1">
                             @csrf
                             @method('PATCH')
+
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="date" class="form-label">Date</label>
+                                   <input
+  type="datetime-local"
+    class="form-control"
+    id="date"
+    name="date"
+       value="{{ old('date', $news->date ?? date('Y-m-d\TH:i')) }}"
+/>
+                                </div>
+                            </div>
+
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="" class="form-label">Post Title</label>
@@ -98,23 +113,6 @@
                                 <div class="form-group">
                                     <label for="" class="form-label">Post Image</label>
                                     <input type="file" class="form-control" id="postImage" name="postImage" />
-                                </div>
-                            </div>
-
-
-                              <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="date" class="form-label">Date</label>
-                                    <span style="color: red;">*</span>
-
-                                   <input
-  type="datetime-local"
-    class="form-control"
-    id="date"
-    name="date"
-       value="{{ old('date', $news->date ?? date('Y-m-d\TH:i')) }}"
-    required
-/>
                                 </div>
                             </div>
 
