@@ -24,7 +24,7 @@
     class="form-control"
     id="date"
     name="date"
-       value="{{ old('date', $news->date ?? date('Y-m-d\TH:i')) }}"
+       value="{{ old('date', $news->date) }}"
 />
                                 </div>
                             </div>

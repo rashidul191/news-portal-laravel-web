@@ -17,8 +17,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label type="datetime-local" class="form-label">Date</label>
-                                    <input type="datetime-local" class="form-control" id="date" name="date"
-                                        value="{{ date('Y-m-d\TH:i') }}" />
+                                    <input type="datetime-local" class="form-control" id="date" name="date" />
                                 </div>
                             </div>
 
