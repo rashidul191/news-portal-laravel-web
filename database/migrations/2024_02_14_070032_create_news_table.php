@@ -21,7 +21,7 @@ return new class extends Migration {
             $table->integer('views');
             $table->string('multycats')->nullable();
             $table->string('auther');
-            $table->dateTime('date');
+           $table->dateTime('date')->nullable();
             $table->timestamps();
         });
     }
